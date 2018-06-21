@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="observer">
+  <packagedElement xmi:type="uml:Package" xmi:id="_QiAwEAYxEeiSO99zZ-BjwQ" name="pattern">
+    <packagedElement xmi:type="uml:Package" xmi:id="_QiOLcAYxEeiSO99zZ-BjwQ" name="observer">
+      <packagedElement xmi:type="uml:Class" xmi:id="_QiOygAYxEeiSO99zZ-BjwQ" name="Observer" isAbstract="true">
+        <ownedAttribute xmi:id="_QlL_4AYxEeiSO99zZ-BjwQ" name="sub" visibility="public" type="_QiWHQAYxEeiSO99zZ-BjwQ" association="_QqevkAYxEeiSO99zZ-BjwQ"/>
+        <ownedOperation xmi:id="_Qo-6wAYxEeiSO99zZ-BjwQ" name="doSomething" visibility="public">
+          <ownedParameter xmi:id="_Qo-6wQYxEeiSO99zZ-BjwQ" name="state">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_QiTD8AYxEeiSO99zZ-BjwQ" name="O1" visibility="package">
+        <generalization xmi:id="_QpB-EAYxEeiSO99zZ-BjwQ" general="_QiOygAYxEeiSO99zZ-BjwQ"/>
+        <ownedOperation xmi:id="_QpClIAYxEeiSO99zZ-BjwQ" name="doSomething" visibility="public">
+          <ownedParameter xmi:id="_QpClIQYxEeiSO99zZ-BjwQ" name="state">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_QiU5IAYxEeiSO99zZ-BjwQ" name="O2" visibility="package">
+        <generalization xmi:id="_QpFBYAYxEeiSO99zZ-BjwQ" general="_QiOygAYxEeiSO99zZ-BjwQ"/>
+        <ownedOperation xmi:id="_QpFocAYxEeiSO99zZ-BjwQ" name="doSomething" visibility="public">
+          <ownedParameter xmi:id="_QpFocQYxEeiSO99zZ-BjwQ" name="state">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_QiWHQAYxEeiSO99zZ-BjwQ" name="SubObject" visibility="package">
+        <ownedAttribute xmi:id="_QpOLUAYxEeiSO99zZ-BjwQ" name="observers" visibility="private"/>
+        <ownedAttribute xmi:id="_QpTD0AYxEeiSO99zZ-BjwQ" name="state" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_QpVgEAYxEeiSO99zZ-BjwQ" name="setState" visibility="public">
+          <ownedParameter xmi:id="_QpVgEQYxEeiSO99zZ-BjwQ" name="state">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_QpX8UAYxEeiSO99zZ-BjwQ" name="getState" visibility="public"/>
+        <ownedOperation xmi:id="_QpaYkAYxEeiSO99zZ-BjwQ" name="addObserver" visibility="public">
+          <ownedParameter xmi:id="_QpaYkQYxEeiSO99zZ-BjwQ" name="obs" type="_QiOygAYxEeiSO99zZ-BjwQ"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_QpcNwAYxEeiSO99zZ-BjwQ" name="notifyAllObs" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_QqevkAYxEeiSO99zZ-BjwQ" memberEnd="_QlL_4AYxEeiSO99zZ-BjwQ _Qqf9sAYxEeiSO99zZ-BjwQ">
+        <ownedEnd xmi:id="_Qqf9sAYxEeiSO99zZ-BjwQ" name="Observer" type="_QiOygAYxEeiSO99zZ-BjwQ" association="_QqevkAYxEeiSO99zZ-BjwQ"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_QkJeEAYxEeiSO99zZ-BjwQ" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_QkKFIAYxEeiSO99zZ-BjwQ" name="util"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_S3eLkAYxEeiSO99zZ-BjwQ" name="List&lt;Observer>"/>
+</uml:Model>
